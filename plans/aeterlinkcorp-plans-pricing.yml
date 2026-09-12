@@ -1,0 +1,47 @@
+generated: '2026-09-12'
+method: searched
+source: >-
+  https://aeterlink.com/en/ and its sitemap index (13 child sitemaps, fetched
+  2026-09-12), plus the AirPlug product site https://airplug-wpt.com/ (3 URLs in
+  sitemap.xml). No /pricing, /plans or /packages page exists on either host.
+description: >-
+  Aeterlink Corp. publishes no price of any kind for AirPlug. It sells a wireless power
+  transfer system — transmitters (PTx), receivers (DRx), AirPlug Sense sensors, the Sumit
+  edge computer and the AirPlug Cloud subscription — as an enterprise, quoted deployment.
+  The public AirPlug site acknowledges a recurring "cloud system usage fee"
+  (クラウドシステム利用料) in its FAQ but attaches no figure to it. Every commercial entry
+  point is a consultation or document-request form.
+
+plan_count: 0
+pricing_model: enterprise / contact-sales
+currency: null
+free_tier: false
+trial: null
+
+plans: []
+
+commercial_entry_points:
+  - url: https://aeterlink.com/en/contact/
+    status: 200
+    kind: contact form
+  - url: https://aeterlink.com/en/documents/
+    status: 200
+    kind: >-
+      document request form — company profile and AirPlug solution materials are emailed
+      after submitting company name, name and email
+  - url: https://airplug-wpt.com/ja/
+    status: 200
+    kind: product landing page with consultation request
+
+probes:
+  - url: https://aeterlink.com/sitemap.xml
+    status: 200
+    note: sitemap index; no pricing-related URL in any child sitemap
+  - url: https://airplug-wpt.com/sitemap.xml
+    status: 200
+    note: 3 URLs (/, /ja, /ja/lp1), none pricing-related
+
+note: >-
+  plan_count 0 is the finding, not an unprobed field. Aeterlink sells installed hardware
+  plus a cloud subscription into factory automation and building management; quoted
+  enterprise pricing is normal for that motion. Recorded so the absence is countable.

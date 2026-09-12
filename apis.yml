@@ -1,7 +1,16 @@
 aid: aeterlinkcorp
-name: Aeterlinkcorp
-description: 'Aeterlinkcorp is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+name: Aeterlink Corp.
+description: >-
+  Aeterlink Corp. is a Tokyo-headquartered deep-tech company, originating from Stanford
+  University research, that develops, manufactures and sells spatial (microwave) wireless
+  power transfer systems under the AirPlug brand. AirPlug delivers power to battery-free
+  IoT sensors and devices at distances of roughly 15-20 meters with bidirectional data
+  communication, and is sold into factory automation, building management and medical
+  implant applications. Founded in August 2020, the company operates offices in Tokyo,
+  Indianapolis and Bangkok, and is active in the international standardization of spatial
+  wireless power transfer. Aeterlink publishes no public developer program, API reference
+  or machine-readable API contract; its product materials are distributed by request form.
+image: https://aeterlink.com/wp-content/uploads/ogp/ogp_new_en.png
 url: https://raw.githubusercontent.com/api-evangelist/aeterlinkcorp/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +21,14 @@ created: '2026-09-12'
 modified: '2026-09-12'
 tags:
 - Company
+- Wireless Power
+- Internet of Things
+- Hardware
+- Industrial Automation
+- Building Management
+- Medical Devices
+- Deep Tech
+- Japan
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +37,54 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://equityzen.com/company/aeterlinkcorp
+  url: https://aeterlink.com/en/
+- type: Company
+  url: https://aeterlink.com/en/company/
+- type: Technology
+  url: https://aeterlink.com/en/technology/
+- type: News
+  url: https://aeterlink.com/en/news/
+- type: Contact
+  url: https://aeterlink.com/en/contact/
+- type: PrivacyPolicy
+  url: https://aeterlink.com/en/privacy_policy/
+- type: TermsOfService
+  url: https://aeterlink.com/wp-content/uploads/airplug_term_of_service.pdf
+- type: Careers
+  url: https://aeterlink.com/recruit/
+- type: Blog
+  url: https://note.com/aeterlink
+- type: LLMsTxt
+  url: llms/aeterlinkcorp-llms.txt
+- type: DomainSecurity
+  url: security/aeterlinkcorp-domain-security.yml
+- type: Plans
+  url: plans/aeterlinkcorp-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/aeterlinkcorp-rate-limits.yml
+x-enrichment:
+  date: '2026-09-12'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v3
+x-coverage:
+  state: gated
+  reason: sales-gate
+  detail: >-
+    Aeterlink's own engineering article names two AirPlug integration surfaces — a
+    "Cloud API" on AirPlug Cloud and a "Direct API" on the Sumit edge computer — but
+    neither has any public reference, base URL or spec, and the only route to technical
+    material is the document-request form at /en/documents/, which emails brochures after
+    a company name and email are submitted.
+  evidence:
+    - url: https://aeterlink.com/en/documents/
+      status: 200
+    - url: https://note.com/aeterlink/n/nfe9fd1486ef2
+      status: 200
+    - url: https://aeterlink.com/openapi.json
+      status: 404
+    - url: https://airplug-wpt.com/openapi.json
+      status: 404
+    - url: https://aeterlink.com/.well-known/api-catalog
+      status: 404
+  checked: '2026-09-12'

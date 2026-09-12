@@ -1,0 +1,46 @@
+generated: '2026-09-12'
+method: searched
+source: >-
+  Full search of every public Aeterlink surface on 2026-09-12 — https://aeterlink.com/
+  (WordPress, sitemap index of 13 child sitemaps), https://airplug-wpt.com/, and the
+  company's own note.com engineering blog. No API reference, developer portal or rate
+  limit documentation exists to read.
+description: >-
+  No Aeterlink rate limits are published, and there is no anonymously reachable API
+  response to observe them on. Aeterlink's own architecture article names two integration
+  surfaces — a "Cloud API" on AirPlug Cloud and a "Direct API" on the Sumit edge computer
+  — but neither has a public reference, base URL, or contract, so there is nothing to
+  probe for runtime rate-limit signalling.
+
+limit_count: 0
+limits: []
+
+response_headers:
+  observed: []
+  checked:
+    - X-RateLimit-Limit
+    - X-RateLimit-Remaining
+    - X-RateLimit-Reset
+    - RateLimit
+    - RateLimit-Policy
+    - Retry-After
+  note: >-
+    Not observable: no API host resolves. api./developer./docs. subdomains of
+    aeterlink.com do not resolve in DNS, and the same subdomains of airplug-wpt.com
+    resolve to a wildcard whose TLS certificate does not cover them.
+
+exhaustion_status_code: null
+
+probes:
+  - url: https://aeterlink.com/wp-json/
+    status: 403
+    note: >-
+      The site is WordPress and its REST API root is blocked to anonymous callers. This
+      is CMS infrastructure, not a product API, and is not recorded as an API surface.
+  - url: https://airplug-wpt.com/openapi.json
+    status: 404
+  - url: https://aeterlink.com/openapi.json
+    status: 404
+
+note: >-
+  limit_count 0 is an honest zero produced by a completed search, not a skipped step.
