@@ -1,5 +1,5 @@
 aid: aeterlinkcorp
-name: Aeterlink Corp.
+name: Aeterlink
 description: >-
   Aeterlink Corp. is a Tokyo-headquartered deep-tech company, originating from Stanford
   University research, that develops, manufactures and sells spatial (microwave) wireless
@@ -98,3 +98,4 @@ x-coverage:
     - url: https://aeterlink.com/.well-known/api-catalog
       status: 404
   checked: '2026-09-12'
+x-legal-name: Aeterlink Corp.
